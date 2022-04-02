@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    max-width: 700px;
+    margin: auto;
+    background-color:#fcf5ed;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.result {
+    width: 100%;
+    display: inline-block;
+    margin-right: 10px 10px 10px 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}

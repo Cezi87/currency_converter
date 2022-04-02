@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konwerter Walut</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__header">Kalkulator Walut</h1>
+    </header>
+    <p>Pola wymagane oznaczone *</p>
+    <form class="js-form form">
+        <p>
+            <label>
+                <span class="form__labelText">
+                    Wpisz kwotę w PLN*
+                </span>
+                <input class="js-amount form__field" type="number" name="amount" min="0.01" step="0.01"
+                autofocus required>
+            </label>
+        </p>
+        <p>
+            <label>
+                <span class="form__labelText">
+                    Wybierz walutę do konwersji*
+                </span>
+                <select class="js-currency form__field form__field--select" name="currency" required>
+                    <option value="EUR" selected>Euro</option>
+                    <option value="RSD">Dinar serbski</option>
+                    <option value="USD">Dolar amerykański</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <button class="form__button">Wyślij!</button>
+            <button class="form__button form__button--reset" type="reset">Wyczyść formularz</button>
+        </p>
+    </form>
+    <p>
+        <span class="js-result result">
+        </span>
+        </p>
+</body>
+
+</html>
