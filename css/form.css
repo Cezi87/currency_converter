@@ -14,11 +14,6 @@
     border-radius: 3px;
 }
 
-.form__field:invalid {
-    background-color: #f3d8d8;
-}
-
-
 .form__field--select {
     background-color: white;
 }

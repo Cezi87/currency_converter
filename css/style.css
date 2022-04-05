@@ -16,7 +16,7 @@ html {
 .result {
     width: 100%;
     display: inline-block;
-    margin-right: 10px 10px 10px 15px;
+    margin: 15px;
     text-align: center;
     font-size: 25px;
     font-weight: 500;
