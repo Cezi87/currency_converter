@@ -21,7 +21,7 @@
 .form__button {
     width: 45%;
     border: none;
-    margin: 10px 0px 10px 10px;
+    margin: 10px 0 10px 10px;
     padding: 10px;
     background-color: #006400;
     color: #ffffff;
@@ -46,7 +46,7 @@
 .form__fieldset {
     border: 1px solid #ccc;
     padding: 20px;
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 .form__legend {

@@ -3,9 +3,9 @@ let amountElement = document.querySelector(".js-amount");
 let currencyElement = document.querySelector(".js-currency");
 let resultElement = document.querySelector(".js-result");
 
-let rateEUR = 4.64;
-let rateRSD = 0.039;
-let rateUSD = 4.16;
+let rateEur = 4.64;
+let rateRsd = 0.039;
+let rateUsd = 4.16;
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -17,17 +17,21 @@ formElement.addEventListener("submit", (event) => {
 
     switch (currency) {
         case "EUR":
-            result = amount / rateEUR;
+            result = amount / rateEur;
             break;
-            
+
         case "RSD":
-            result = amount / rateRSD;
+            result = amount / rateRsd;
             break;
 
         case "USD":
-            result = amount / rateUSD;
+            result = amount / rateUsd;
             break;
     }
-    
+
     resultElement.innerHTML = result.toFixed(2);
+});
+
+formElement.addEventListener("reset", (event) => {
+    resultElement.innerHTML = '';
 });
