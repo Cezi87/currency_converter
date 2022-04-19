@@ -5,6 +5,10 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__header {
