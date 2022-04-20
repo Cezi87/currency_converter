@@ -11,7 +11,8 @@ html {
     margin: auto;
     background-color: #fcf5ed;
     font-family: 'Quicksand', sans-serif;
-    background: center url("../images/pexels-scott-webb-2824173_flat-transparent.jpg");
+    font-weight: 500;
+    background: url("../images/pexels-scott-webb-2824173_flat-transparent.jpg");
 }
 
 .result {

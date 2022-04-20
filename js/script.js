@@ -29,7 +29,7 @@ formElement.addEventListener("submit", (event) => {
             break;
     }
 
-    resultElement.innerHTML = result.toFixed(2);
+    resultElement.innerHTML = `${result.toFixed(2)} ${currency}`;
 });
 
 formElement.addEventListener("reset", (event) => {
