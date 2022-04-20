@@ -7,3 +7,6 @@ https://cezi87.github.io/currency_converter/
 - JavaScript
 ## Features:
 Converts Polish Zlotys into three different selectable currencies: Euro, Serbian Dinars and US Dollars. Features a reset button which resets both form inputs and the result.
+## Tech used:
+- BEM
+- FlexBox
