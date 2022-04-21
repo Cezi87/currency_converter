@@ -10,3 +10,6 @@ Converts Polish Zlotys into three different selectable currencies: Euro, Serbian
 ## Tech used:
 - BEM
 - FlexBox
+## Image credits:
+- Site icon by [freevector](https://www.freevector.com/)
+- Background photo by [Scott Webb from Pexels](https://www.pexels.com/pl-pl/@scottwebb/)
