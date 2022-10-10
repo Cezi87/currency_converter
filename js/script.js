@@ -1,49 +1,54 @@
 {
-    const welcome = () => {
-        console.log("Welcome to all developers!");
+  const welcome = () => {
+    console.log("Welcome to all developers!");
+  };
+
+  welcome();
+
+  const calculateResult = (amount, currency) => {
+    const rateEur = 4.64;
+    const rateRsd = 0.039;
+    const rateUsd = 4.16;
+
+    switch (currency) {
+      case "EUR":
+        return amount / rateEur;
+
+      case "RSD":
+        return amount / rateRsd;
+
+      case "USD":
+        return amount / rateUsd;
     }
+  };
 
-    welcome();
+  const updateResultText = (result, currency) => {
+    const resultElement = document.querySelector(".js-result");
+    resultElement.innerHTML = `${result.toFixed(2)} ${currency}`;
+  };
 
-    const initForm = () => {
+  const onFormSubmit = (event) => {
+    event.preventDefault();
 
-        const formElement = document.querySelector(".js-form");
-        const amountElement = document.querySelector(".js-amount");
-        const currencyElement = document.querySelector(".js-currency");
-        const resultElement = document.querySelector(".js-result");
+    const amountElement = document.querySelector(".js-amount");
+    const currencyElement = document.querySelector(".js-currency");
+    const amount = +amountElement.value;
+    const currency = currencyElement.value;
 
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
+    let result = calculateResult(amount, currency);
 
-            const rateEur = 4.64;
-            const rateRsd = 0.039;
-            const rateUsd = 4.16;
+    updateResultText(result, currency);
+  };
 
-            let amount = +amountElement.value;
-            let currency = currencyElement.value;
+  const initForm = () => {
+    const formElement = document.querySelector(".js-form");
+    const resultElement = document.querySelector(".js-result");
 
-            let result;
+    formElement.addEventListener("submit", onFormSubmit);
 
-            switch (currency) {
-                case "EUR":
-                    result = amount / rateEur;
-                    break;
-
-                case "RSD":
-                    result = amount / rateRsd;
-                    break;
-
-                case "USD":
-                    result = amount / rateUsd;
-                    break;
-            }
-
-            resultElement.innerHTML = `${result.toFixed(2)} ${currency}`;
-        });
-
-        formElement.addEventListener("reset", (event) => {
-            resultElement.innerHTML = '';
-        });
-    }
-    initForm();
+    formElement.addEventListener("reset", (event) => {
+      resultElement.innerHTML = "";
+    });
+  };
+  initForm();
 }
